@@ -186,15 +186,28 @@ typedef unsigned int JDIMENSION;
 #define LOCAL(type)		static type
 
 #if defined(LIBJPEG_BUILD_DLL)
+#if defined(LIBJPEG_BUILD)
 /* a function referenced thru EXTERNs: */
 #define GLOBAL(type)		__declspec(dllexport) type
 /* a reference to a GLOBAL function: */
 #define EXTERN(type)		extern __declspec(dllexport) type
-#else   // defined(LIBJPEG_BUILD_DLL)
+
+#else   // defined(LIBJPEG_BUILD)
+
+/* a function referenced thru EXTERNs: */
+#define GLOBAL(type)		__declspec(dllimport) type
+/* a reference to a GLOBAL function: */
+#define EXTERN(type)		extern __declspec(dllimport) type
+
+#endif // defined(LIBJPEG_BUILD)
+
+#else  // defined(LIBJPEG_BUILD_DLL)
+
 /* a function referenced thru EXTERNs: */
 #define GLOBAL(type)		type
 /* a reference to a GLOBAL function: */
 #define EXTERN(type)		extern type
+
 #endif // defined(LIBJPEG_BUILD_DLL)
 
 /* This macro is used to declare a "method", that is, a function pointer.
