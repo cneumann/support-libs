@@ -1,0 +1,14 @@
+
+CMake scripts to build image io and other support libraries on Windows.
+
+This is heavily based on the support lib build of OpenSG 2 (www.opensg.org).
+
+
+At the time of writing these library version where current and used for testing:
+
+OpenEXR     1.7.0
+ilmbase     1.0.2
+libjpeg     8d
+libpng      1.5.9
+libtiff     4.0.1
+zlib        1.2.6
