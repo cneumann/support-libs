@@ -79,6 +79,7 @@ IF(LIBTIFF_SRC_DIR)
     LIST(APPEND C_HDR_FILES "${LIBTIFF_SRC_DIR}/libtiff/tif_config.h")
     LIST(APPEND C_HDR_FILES "${LIBTIFF_SRC_DIR}/libtiff/tiffconf.h")
     LIST(APPEND C_HDR_FILES "${LIBTIFF_SRC_DIR}/libtiff/tiff.h")
+    LIST(APPEND C_HDR_FILES "${LIBTIFF_SRC_DIR}/libtiff/tiffio.h")
     LIST(APPEND C_HDR_FILES "${LIBTIFF_SRC_DIR}/libtiff/tiffvers.h")
 
     SET(TEST0_C_SRC_FILES)

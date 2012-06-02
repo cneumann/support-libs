@@ -6,9 +6,11 @@ This is heavily based on the support lib build of OpenSG 2 (www.opensg.org).
 
 At the time of writing these library version where current and used for testing:
 
-OpenEXR     1.7.0
-ilmbase     1.0.2
-libjpeg     8d
-libpng      1.5.9
-libtiff     4.0.1
-zlib        1.2.6
+OpenEXR     1.7.0      http://download.savannah.nongnu.org/releases/openexr/openexr-1.7.0.tar.gz
+ilmbase     1.0.2      http://download.savannah.nongnu.org/releases/openexr/ilmbase-1.0.2.tar.gz
+libjpeg     8d         http://www.ijg.org/files/jpegsrc.v8d.tar.gz
+libpng      1.5.10     ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng-1.5.10.tar.gz
+libtiff     4.0.1      ftp://ftp.remotesensing.org/pub/libtiff/tiff-4.0.1.tar.gz
+jasper      1.900.1    http://www.ece.uvic.ca/~frodo/jasper/software/jasper-1.900.1.zip
+openjpeg    1.5.0      http://openjpeg.googlecode.com/files/openjpeg-1.5.0.tar.gz
+zlib        1.2.7      http://zlib.net/zlib-1.2.7.tar.gz
