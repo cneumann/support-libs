@@ -5,6 +5,12 @@ IF(LIBTIFF_SRC_DIR)
 
     PROJECT(tiff C)
 
+    # sanity check LIBTIFF_SRC_DIR
+    IF(NOT EXISTS "${LIBTIFF_SRC_DIR}/libtiff/tiff.h")
+        MESSAGE(SEND_ERROR "No file 'libtiff/tiff.h' in LIBTIFF_SRC_DIR = '${LIBTIFF_SRC_DIR}'")
+        RETURN()
+    ENDIF(NOT EXISTS "${LIBTIFF_SRC_DIR}/libtiff/tiff.h")
+
     SET(TARGET_NAME_SHARED ${LIBTIFF_TARGET_NAME_SHARED})
     SET(TARGET_NAME_STATIC ${LIBTIFF_TARGET_NAME_STATIC})
 

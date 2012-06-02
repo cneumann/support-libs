@@ -4,6 +4,12 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 IF(JASPER_SRC_DIR)
     PROJECT(jasper C)
 
+    # sanity check JASPER_SRC_DIR
+    IF(NOT EXISTS "${JASPER_SRC_DIR}/src/libjasper/include/jasper/jasper.h")
+        MESSAGE(SEND_ERROR "No file 'src/libjasper/include/jasper/jasper.h' in JASPER_SRC_DIR = '${JASPER_SRC_DIR}'")
+        RETURN()
+    ENDIF(NOT EXISTS "${JASPER_SRC_DIR}/src/libjasper/include/jasper/jasper.h")
+
     SET(JASPER_TARGET_NAME_SHARED jasper)
     SET(JASPER_TARGET_NAME_STATIC libjasper)
 

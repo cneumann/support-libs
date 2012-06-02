@@ -5,6 +5,12 @@ IF(ZLIB_SRC_DIR)
 
     PROJECT(zlib C)
 
+    # sanity check ZLIB_SRC_DIR
+    IF(NOT EXISTS "${ZLIB_SRC_DIR}/zlib.h")
+        MESSAGE(SEND_ERROR "No file 'zlib.h' in ZLIB_SRC_DIR = '${ZLIB_SRC_DIR}'")
+        RETURN()
+    ENDIF(NOT EXISTS "${ZLIB_SRC_DIR}/zlib.h")
+
     SET(TARGET_NAME_SHARED ${ZLIB_TARGET_NAME_SHARED})
     SET(TARGET_NAME_STATIC ${ZLIB_TARGET_NAME_STATIC})
 
